@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.kahlo_gui_opc1_controller">
+   <children>
+      <SplitPane fx:id="split_lataDatos" disable="true" dividerPositions="0.4" orientation="VERTICAL" prefHeight="402.0" prefWidth="160.0">
+        <items>
+          <AnchorPane fx:id="pnl_lata" disable="true" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+          <AnchorPane fx:id="pnl_datos" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+        </items>
+      </SplitPane>
+      <SplitPane fx:id="split_graficasMapa" disable="true" dividerPositions="0.25" orientation="VERTICAL" prefHeight="402.0" prefWidth="436.0">
+        <items>
+          <AnchorPane fx:id="pnl_graficas" disable="true" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+          <AnchorPane fx:id="pnl_mapa" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+        </items>
+      </SplitPane>
+   </children>
+</FlowPane>

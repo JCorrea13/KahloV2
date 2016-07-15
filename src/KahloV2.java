@@ -15,15 +15,16 @@ public class KahloV2 extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("vista/kahlo_gui.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("vista/kahlo_gui_opc1.fxml"));
 
         primaryStage.setTitle("Kahlo V2");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(new Scene(root, 930, 468));
         primaryStage.getIcons().add(new Image("file:recursos/KahloIcono.png"));
         primaryStage.show();
     }
 
     public static void main(String [] args){
+        System.setProperty("java.net.useSystemProxies", "true");
         launch(args);
     }
 }
