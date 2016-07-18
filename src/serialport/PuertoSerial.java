@@ -32,14 +32,14 @@ public class PuertoSerial {
      * Este metodo verifica y pone en una pila todos los puertos disponibles
      * @return Stack con los puertos disponibles
     */
-    public static Stack getListaPuertos() {
-        Stack<CommPortIdentifier> puertos = new Stack<CommPortIdentifier>();
+    public static Stack<Puerto> getListaPuertos() {
+        Stack<Puerto> puertos = new Stack<Puerto>();
         CommPortIdentifier puerto = null;
         Enumeration listaPuertos = CommPortIdentifier.getPortIdentifiers();
 
         while (listaPuertos.hasMoreElements()) {
             puerto = (CommPortIdentifier) listaPuertos.nextElement();
-            puertos.push(puerto);
+            puertos.push(new Puerto(puerto));
         }
         return puertos;
     }
@@ -111,6 +111,4 @@ public class PuertoSerial {
     public int read(byte [] b) throws IOException {
         return entrada.read(b);
     }
-    
-    
 }
