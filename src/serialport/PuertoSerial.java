@@ -28,11 +28,15 @@ public class PuertoSerial {
     private static InputStream entrada = null;
     private static OutputStream salida = null;
 
+    public PuertoSerial(CommPortIdentifier puerto, int baudrate, int databits, int stopbits, boolean parity) throws PortInUseException, IOException {
+        abrirPuerto(puerto,baudrate,databits,stopbits,parity);
+    }
+
     /**
      * Este metodo verifica y pone en una pila todos los puertos disponibles
      * @return Stack con los puertos disponibles
     */
-    public static Stack<Puerto> getListaPuertos() {
+    public static Stack<Puerto> getListaPuertos() throws Exception{
         Stack<Puerto> puertos = new Stack<Puerto>();
         CommPortIdentifier puerto = null;
         Enumeration listaPuertos = CommPortIdentifier.getPortIdentifiers();
@@ -60,7 +64,7 @@ public class PuertoSerial {
             salida = puertoSerie.getOutputStream();
 
             // configuramos el puerto
-            configurarPuertoEscritura(baudrate, databits, stopbits, parity);
+            configurarPuerto(baudrate, databits, stopbits, parity);
             return true;
     }
 
@@ -70,7 +74,7 @@ public class PuertoSerial {
      *
      * @return True si la configuracion ah tenido exito
      */
-    private boolean configurarPuertoEscritura(int baudrate, int databits, int stopbits, boolean parity) {
+    private boolean configurarPuerto(int baudrate, int databits, int stopbits, boolean parity) {
         try {
             puertoSerie.setSerialPortParams(baudrate, databits, stopbits, (parity)?SerialPort.PARITY_EVEN:puertoSerie.PARITY_NONE );
             puertoSerie.notifyOnDataAvailable(true);
@@ -109,6 +113,16 @@ public class PuertoSerial {
      * @throws IOException
      */
     public int read(byte [] b) throws IOException {
-        return entrada.read(b);
+        if(entrada.available() != 0)
+            return entrada.read(b);
+        return 0;
+    }
+
+    /**
+     * Este metodo reajusta la lectura en un byte.
+     * Lee un byte y lo ignora
+    */
+    public void corrige() throws IOException {
+        entrada.read();
     }
 }

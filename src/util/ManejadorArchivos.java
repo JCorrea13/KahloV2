@@ -98,7 +98,7 @@ public class ManejadorArchivos {
      */
     public void setContenidoArchivo(String ruta, String contenido) throws IOException{
         //validamos el directorio de trabajo
-        verificaDiretorioTrabajo(ruta.substring(0, ruta.lastIndexOf("/")));
+        verificaDiretorioTrabajo(ruta.substring(0, ruta.lastIndexOf(File.separator)));
         
         File f = new File(ruta);
         FileWriter fw = new FileWriter(f, false);
@@ -115,7 +115,7 @@ public class ManejadorArchivos {
     public void setContenidoArchivoInArray(String ruta, ArrayList<String> contenido) throws IOException{
         
         //validamos el directorio de trabajo
-        verificaDiretorioTrabajo(ruta.substring(0, ruta.lastIndexOf("/")));
+        verificaDiretorioTrabajo(ruta.substring(0, ruta.lastIndexOf(File.separator)));
         
         File f = new File(ruta);
         FileWriter fw = new FileWriter(f, false);
@@ -134,7 +134,7 @@ public class ManejadorArchivos {
     public void agregaContenidoArchivo(String ruta, String contenido) throws IOException{
         
         //validamos el directorio de trabajo
-        verificaDiretorioTrabajo(ruta.substring(0, ruta.lastIndexOf("/")));
+        verificaDiretorioTrabajo(ruta.substring(0, ruta.lastIndexOf(File.separator)));
         
         File f = new File(ruta);
         FileWriter fw = new FileWriter(f, true);
@@ -151,11 +151,10 @@ public class ManejadorArchivos {
     public void agregaContenidoArchivoInArray(String ruta, ArrayList<String> contenido) throws IOException{
         
         //validamos el directorio de trabajo
-        verificaDiretorioTrabajo(ruta.substring(0, ruta.lastIndexOf("/")));
+        verificaDiretorioTrabajo(ruta.substring(0, ruta.lastIndexOf(File.separator)));
         
         File f = new File(ruta);
         FileWriter fw = new FileWriter(f, true);
-        fw.write("\n");
         for(String s : contenido)
             fw.write(s + "\n");
         
@@ -166,19 +165,16 @@ public class ManejadorArchivos {
      * Este metodo crea o agrega el archivo que que se pasa como parametro
      * @param ruta ruta y nombre del archivo (ruta/name.extension)
      * @param contenido array de bytes que se excribiran en el archivo
-     * @param codif array de bytes que representa las codificaciones    
      * @throws IOException 
      */
-    public void agregaContenidoArchivoByte(String ruta, byte [] contenido, byte [] codif) throws IOException{
+    public void agregaContenidoArchivoByte(String ruta, byte [] contenido) throws IOException{
         
         //validamos el directorio de trabajo
-        verificaDiretorioTrabajo(ruta.substring(0, ruta.lastIndexOf("/")));
+        verificaDiretorioTrabajo(ruta.substring(0, ruta.lastIndexOf(File.separator)));
         
         FileOutputStream fos = new FileOutputStream(ruta, true);
         DataOutputStream salida = new DataOutputStream(fos);
-        
-        if(codif != null)
-            salida.write(codif);
+
         salida.write(contenido);
         salida.close();
     }
@@ -191,9 +187,9 @@ public class ManejadorArchivos {
      * @throws IOException 
      */
     public void setContenidoArchivoByte(String ruta, byte [] contenido, byte [] codif) throws IOException{
-        
+
         //validamos el directorio de trabajo
-        verificaDiretorioTrabajo(ruta.substring(0, ruta.lastIndexOf("/")));
+        verificaDiretorioTrabajo(ruta.substring(0, ruta.lastIndexOf(File.separator)));
         
         FileOutputStream fos = new FileOutputStream(ruta, false);
         DataOutputStream salida = new DataOutputStream(fos);
@@ -216,7 +212,7 @@ public class ManejadorArchivos {
         return f.exists();
         
     }
-    
+
     /**
     * Este metodo verifica que el directorio de trabajo exista
     * y si no existe lo crea

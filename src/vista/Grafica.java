@@ -29,8 +29,10 @@ public class Grafica extends AnchorPane {
 
     private ConcurrentLinkedQueue<Dato> datos = new ConcurrentLinkedQueue<Dato>();
     private final int MAX_DATA_POINTS = 50;
+    private long periodo;
 
-    public  Grafica(String titulo, int valor_maximo, int valor_minimo, int altura_maxima){
+    public  Grafica(String titulo, int valor_maximo, int valor_minimo, int altura_maxima, int periodo){
+        this.periodo = periodo * 1000000; //lo pasamos de milisegundo a nanosengudos
         ejeY = new NumberAxis(valor_minimo
                 ,(altura_maxima < valor_maximo)? valor_maximo : altura_maxima
                 ,calcula_intervalo(valor_maximo,altura_maxima, valor_minimo));
@@ -97,7 +99,7 @@ public class Grafica extends AnchorPane {
 
         @Override
         public void handle(long now) {
-            if (now - lastUpdate >= 200_000_000) {
+            if (now - lastUpdate >= periodo) {
                 run();
                 lastUpdate = now;
             }

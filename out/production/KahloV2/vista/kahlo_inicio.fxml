@@ -3,6 +3,9 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
@@ -11,28 +14,53 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="930.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.kahlo_inicio_controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="930.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.Kahlo_inicio_controller">
    <children>
-      <ImageView fx:id="imagen" fitHeight="150.0" fitWidth="200.0" layoutX="414.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imagen" fitHeight="150.0" fitWidth="200.0" layoutX="398.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../recursos/Kahlo.png" />
          </image>
       </ImageView>
-      <ComboBox fx:id="cbo_puertos" layoutX="433.0" layoutY="210.0" prefWidth="150.0" />
-      <RadioButton fx:id="rbtn_mision" layoutX="414.0" layoutY="176.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="61.0" selected="true" text="Misión" />
-      <RadioButton fx:id="rbtn_prueba" layoutX="475.0" layoutY="176.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="91.0" text="Prueba" />
-      <Label layoutX="377.0" layoutY="214.0" text="Puerto:" />
-      <Pane fx:id="pnl_mision" layoutX="293.0" layoutY="242.0" prefHeight="169.0" prefWidth="374.0">
+      <Pane fx:id="pnl_mision" layoutX="293.0" layoutY="266.0" prefHeight="169.0" prefWidth="374.0">
          <children>
             <TextField fx:id="txt_nombremision" layoutX="187.0" layoutY="14.0" />
-            <Label layoutX="69.0" layoutY="18.0" text="Nombre de la misión: " />
+            <Label layoutX="68.0" layoutY="18.0" text="Nombre de la misión: " />
             <TextField fx:id="txt_alturamaxima" layoutX="188.0" layoutY="46.0" />
-            <Label layoutX="31.0" layoutY="50.0" text="Altura maxima esperada (m):" />
-            <Label layoutX="31.0" layoutY="76.0" text="Descripcion: " />
+            <Label layoutX="30.0" layoutY="50.0" text="Altura maxima esperada (m):" />
+            <Label layoutX="29.0" layoutY="76.0" text="Descripcion: " />
+            <TextArea fx:id="txt_descripcion" layoutX="28.0" layoutY="93.0" prefHeight="70.0" prefWidth="308.0" />
          </children>
       </Pane>
-      <Button fx:id="btn_aceptar" layoutX="326.0" layoutY="422.0" mnemonicParsing="false" onAction="#onTerminarConfiguracion" prefHeight="25.0" prefWidth="308.0" text="Aceptar" />
-      <TextArea fx:id="txt_descripcion" layoutX="326.0" layoutY="335.0" prefHeight="70.0" prefWidth="308.0" />
-      <Button fx:id="btn_recargar" layoutX="587.0" layoutY="210.0" mnemonicParsing="false" onAction="#cargaPuertos" prefHeight="25.0" prefWidth="29.0" text="..." />
+      <Button fx:id="btn_aceptar" layoutX="321.0" layoutY="444.0" mnemonicParsing="false" onAction="#onTerminarConfiguracion" prefHeight="25.0" prefWidth="308.0" text="Aceptar" />
+      <MenuBar layoutX="1.0" layoutY="2.0" prefHeight="25.0" prefWidth="930.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Configuración">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onClickIntalar" text="Intalación de Kahlo V2" />
+                  <MenuItem mnemonicParsing="false" onAction="#onClickEspaciodeTrabajo" text="Espacio de trabajo" />
+                  <MenuItem mnemonicParsing="false" onAction="#onClickConfiguraTelemetria" text="Configuración Telemetria" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Acerca de" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Pane fx:id="pnl_tipo" layoutX="343.0" layoutY="198.0" prefHeight="37.0" prefWidth="264.0">
+         <children>
+            <RadioButton fx:id="rbtn_mision" layoutX="27.0" layoutY="9.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="61.0" selected="true" text="Misión" />
+            <RadioButton fx:id="rbtn_prueba" layoutX="101.0" layoutY="9.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="91.0" text="Prueba" />
+            <RadioButton fx:id="rbtn_archivo" layoutX="173.0" layoutY="9.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="61.0" text="Archivo" />
+         </children>
+      </Pane>
+      <Pane fx:id="pnl_puerto" layoutX="337.0" layoutY="235.0" prefHeight="37.0" prefWidth="264.0">
+         <children>
+            <Label layoutX="16.0" layoutY="9.0" text="Puerto:" />
+            <ComboBox fx:id="cbo_puertos" layoutX="57.0" layoutY="6.0" prefHeight="25.0" prefWidth="166.0" />
+            <Button fx:id="btn_recargar" layoutX="228.0" layoutY="6.0" mnemonicParsing="false" onAction="#cargaPuertos" prefHeight="25.0" prefWidth="29.0" text="..." />
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
