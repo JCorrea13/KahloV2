@@ -63,7 +63,7 @@ public class Configuracion {
         return ruta_archivo;
     }
 
-    public void setRutaArchivo(String rutaArchivo) {
+    public void setRutaArchivo(String ruta_archivo) {
         this.ruta_archivo = ruta_archivo;
     }
 

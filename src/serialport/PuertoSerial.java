@@ -28,7 +28,7 @@ public class PuertoSerial {
     private static InputStream entrada = null;
     private static OutputStream salida = null;
 
-    public PuertoSerial(CommPortIdentifier puerto, int baudrate, int databits, int stopbits, boolean parity) throws PortInUseException, IOException {
+    public PuertoSerial(CommPortIdentifier puerto, int baudrate, int databits, int stopbits, int parity) throws PortInUseException, IOException {
         abrirPuerto(puerto,baudrate,databits,stopbits,parity);
     }
 
@@ -53,30 +53,34 @@ public class PuertoSerial {
     * @param puerto se refiere al puerto que se desea abrir
     * @return True si se abrio el puerto exitosamente
     */
-    private boolean abrirPuerto(CommPortIdentifier puerto, int baudrate, int databits, int stopbits, boolean parity) throws PortInUseException, IOException {
+    private boolean abrirPuerto(CommPortIdentifier puerto, int baudrate, int databits, int stopbits, int parity)
+            throws PortInUseException, IOException {
 
         if (puerto == null) {
             return false;
         }
 
-            puertoSerie = (SerialPort) puerto.open(puerto.getName(), 2000); //se abre el puerto con un delay de 2000ms
-            entrada = puertoSerie.getInputStream();
-            salida = puertoSerie.getOutputStream();
+        puertoSerie = (SerialPort) puerto.open(puerto.getName(), 2000); //se abre el puerto con un delay de 2000ms
+        entrada = puertoSerie.getInputStream();
+        salida = puertoSerie.getOutputStream();
 
-            // configuramos el puerto
-            configurarPuerto(baudrate, databits, stopbits, parity);
-            return true;
+        // configuramos el puerto
+        configurarPuerto(baudrate, databits, stopbits, parity);
+        return true;
     }
 
     /**
-     * Este metodo configura el puerto para escribir y hacer la comunicacion con
-     * Google Earth con el protocolo NMEA
+     * Este metod configura el puerto serial con los parametros pasados.
      *
-     * @return True si la configuracion ah tenido exito
+     * @param baudrate velocidad a la que trabajara el puerto
+     * @param databits numero de bits de datos
+     * @param stopbits numemro de bits de parada
+     * @param parity paridad (0 = NONE, 1 = ODD, 2 = EVEN, 3 = MARK, 4 = SPACE)
+     * @return True si la configuracion fue exitos False en otro caso
      */
-    private boolean configurarPuerto(int baudrate, int databits, int stopbits, boolean parity) {
+    private boolean configurarPuerto(int baudrate, int databits, int stopbits, int parity) {
         try {
-            puertoSerie.setSerialPortParams(baudrate, databits, stopbits, (parity)?SerialPort.PARITY_EVEN:puertoSerie.PARITY_NONE );
+            puertoSerie.setSerialPortParams(baudrate, databits, stopbits, parity);
             puertoSerie.notifyOnDataAvailable(true);
             return true;
         } catch (Exception e) {

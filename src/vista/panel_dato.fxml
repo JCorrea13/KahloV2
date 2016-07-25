@@ -4,9 +4,9 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="59.0" prefWidth="248.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.Panel_datos_controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="59.0" prefWidth="232.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.Panel_datos_controller">
    <children>
-      <Label fx:id="lbl_etiqueta" layoutX="9.0" layoutY="4.0" text="Label" />
-      <TextField fx:id="txt_valor" layoutX="9.0" layoutY="24.0" prefHeight="25.0" prefWidth="221.0" />
+      <Label fx:id="lbl_etiqueta" layoutX="5.0" layoutY="4.0" text="Label" />
+      <TextField fx:id="txt_valor" editable="false" layoutX="5.0" layoutY="24.0" prefHeight="25.0" prefWidth="221.0" />
    </children>
 </Pane>

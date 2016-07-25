@@ -63,15 +63,9 @@ public class Main extends Application {
 
     public static void main(String[] args) throws Exception {
 
-
-        byte num [] = new byte[] {0 , (byte)255};
-
-        int n = 0;
-        for (int i = 0; i < num.length; i++)
-            n = (n<<8)| Byte.toUnsignedInt(num[i]);
-
-        System.out.println(n);
-        System.out.println(Byte.toUnsignedInt((byte)255));
+        System.out.println(System.getProperty("os.name").toLowerCase());
+        System.out.println(System.getProperty("os.arch").toLowerCase());
+        System.out.println(System.getProperty("os.version").toLowerCase());
         //launch(args);
     }
 }

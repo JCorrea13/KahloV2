@@ -1,10 +1,13 @@
 package vista;
 
 import gnu.io.PortInUseException;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Alert;
 import javafx.scene.control.SplitPane;
 import javafx.scene.layout.Pane;
+import kahlo_configuraciones.ConfiguracionPuertoSerial;
 import kahlo_configuraciones.ConfiguracionTelemetria;
 import kahlo_mision.Configuracion;
 import kahlo_configuraciones.ConfiguracionSensor;
@@ -85,13 +88,16 @@ public class Kahlo_gui_controller implements CallBackClick{
      * usara la consola y en este momento se inicia la lectura de datos
      * @param configuracion configuracion de la consola deseada
      */
-    public void setConfiguracion(Configuracion configuracion, ConfiguracionTelemetria configuracionTelemetria) throws PortInUseException, IOException {
+    public void setConfiguracion(Configuracion configuracion, ConfiguracionTelemetria configuracionTelemetria
+            , ConfiguracionPuertoSerial configuracionPuertoSerial) throws PortInUseException, IOException {
+
         this.configuracion = configuracion;
         this.configuracionTelemetria = configuracionTelemetria;
-        mada = new Manejador_de_Datos(configuracion, configuracionTelemetria);
+        mada = new Manejador_de_Datos(configuracion, configuracionTelemetria, configuracionPuertoSerial);
         lectoDatos = new Timer(true);
         lectoDatos.scheduleAtFixedRate(new LectorDatos(), 100, configuracionTelemetria.getPeriodo());
         initDatos();
+
     }
 
     @Override
@@ -101,6 +107,22 @@ public class Kahlo_gui_controller implements CallBackClick{
     }
 
     private void actualizaDatos(HashMap<String,String> telemetria){
+
+        //validamos el caso de ser seesion archivo que no se haya terminado de leer el archivo
+        if(configuracion.getTipo() == Configuracion.Tipo.ARCHIVO && telemetria == null){
+            lectoDatos.cancel();
+            Platform.runLater(new Runnable() {
+                @Override
+                public void run() {
+                    Alert a  = new Alert(Alert.AlertType.INFORMATION);
+                    a.setContentText("El se termino de leer el archivo");
+                    a.setTitle("Archivo");
+                    a.setHeaderText("Fin de archivo");
+                    a.show();
+                }
+            }); //Avisamos al usuario del final del archivo
+            return;
+        }
 
         double altitud = 0;
         if(telemetria.containsKey("ALTITUD"))
@@ -126,7 +148,7 @@ public class Kahlo_gui_controller implements CallBackClick{
 
         //actualizamos los datos del modelo 3D de la lata
         if(telemetria.containsKey("ROLL") && telemetria.containsKey("YAW") && telemetria.containsKey("PITCH"))
-        panel_lata3D_controller.rota(Double.valueOf(telemetria.get("ROLL")), Double.valueOf(telemetria.get("YAW")) ,Double.valueOf(telemetria.get("PITCH")));
+            panel_lata3D_controller.rota(Double.valueOf(telemetria.get("ROLL")), Double.valueOf(telemetria.get("YAW")) ,Double.valueOf(telemetria.get("PITCH")));
         //System.out.println("actualizando datos");
     }
 

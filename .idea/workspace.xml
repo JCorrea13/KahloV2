@@ -5,58 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kahlo_configuraciones/ConfiguracionSensor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kahlo_configuraciones/ConfiguracionTelemetria.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kahlo_configuraciones/ManejadorConfiguraciones.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kahlo_mision/Manejador_de_Datos.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kahlo_mision/Telemetria.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/panel_dato.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vista/Configuracion_telemetria_controller.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vista/Espacio_trabajo_controller.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vista/Instalacion_kahlov2_controller.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vista/Panel_datos_controller.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vista/TablaConfiguracionTelemetria.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vista/configuracion_telemetria.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vista/espacio_trabajo.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vista/intalacion_kahlov2.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vista/panel_dato.fxml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KahloV2/vista/GoogleMapView$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KahloV2/vista/GoogleMapView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KahloV2/vista/kahlo_gui_controller$Graficas_e.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KahloV2/vista/panel_datos.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KahloV2/vista/panel_datos_controller$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KahloV2/vista/panel_datos_controller$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KahloV2/vista/panel_datos_controller$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KahloV2/vista/panel_datos_controller$CallBack_ClickLabel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KahloV2/vista/panel_datos_controller$Estados_Liberacion.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/KahloV2/vista/panel_datos_controller$Estados_Paracaidas.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rxtx-2.1-7-bins-r2/INSTALL" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rxtx-2.1-7-bins-r2/Linux/i686-unknown-linux-gnu/librxtxParallel.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rxtx-2.1-7-bins-r2/Linux/i686-unknown-linux-gnu/librxtxSerial.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rxtx-2.1-7-bins-r2/Linux/ia64-unkown-linux-gnu/librxtxSerial.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rxtx-2.1-7-bins-r2/Linux/x86_64-unknown-linux-gnu/librxtxSerial.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rxtx-2.1-7-bins-r2/Mac_OS_X/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rxtx-2.1-7-bins-r2/Mac_OS_X/librxtxSerial.jnilib" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rxtx-2.1-7-bins-r2/RXTXcomm.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rxtx-2.1-7-bins-r2/Solaris/sparc-solaris/sparc32-sun-solaris2.8/librxtxSerial-2.1-7.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rxtx-2.1-7-bins-r2/Solaris/sparc-solaris/sparc32-sun-solaris2.8/librxtxSerial.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rxtx-2.1-7-bins-r2/Solaris/sparc-solaris/sparc64-sun-solaris2.8/librxtxSerial-2.1-7.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rxtx-2.1-7-bins-r2/Solaris/sparc-solaris/sparc64-sun-solaris2.8/librxtxSerial.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rxtx-2.1-7-bins-r2/Windows/i368-mingw32/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rxtx-2.1-7-bins-r2/Windows/i368-mingw32/rxtxParallel.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rxtx-2.1-7-bins-r2/Windows/i368-mingw32/rxtxSerial.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/vista/panel_datos.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/vista/panel_datos_controller.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/vista/GoogleMapView.java" afterPath="$PROJECT_DIR$/src/vista/VistaMapa.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/vista/kahlo_gui_controller.java" afterPath="$PROJECT_DIR$/src/vista/Kahlo_gui_controller.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/vista/kahlo_inicio_controller.java" afterPath="$PROJECT_DIR$/src/vista/Kahlo_inicio_controller.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/vista/panel_lata3D_controller.java" afterPath="$PROJECT_DIR$/src/vista/Panel_lata3D_controller.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kahlo_configuraciones/ConfiguracionPuertoSerial.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/util/ManejadorPreferencias.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/util/ManejadorSerializables.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vista/configuracion_uart.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/vista/configuracion_uart_controller.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KahloV2/KahloV2.class" afterPath="$PROJECT_DIR$/out/production/KahloV2/KahloV2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KahloV2/kahlo_mision/Configuracion.class" afterPath="$PROJECT_DIR$/out/production/KahloV2/kahlo_mision/Configuracion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KahloV2/sample/Main.class" afterPath="$PROJECT_DIR$/out/production/KahloV2/sample/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KahloV2/kahlo_mision/Manejador_de_Datos.class" afterPath="$PROJECT_DIR$/out/production/KahloV2/kahlo_mision/Manejador_de_Datos.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KahloV2/serialport/PuertoSerial.class" afterPath="$PROJECT_DIR$/out/production/KahloV2/serialport/PuertoSerial.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KahloV2/util/ManejadorArchivos.class" afterPath="$PROJECT_DIR$/out/production/KahloV2/util/ManejadorArchivos.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KahloV2/util/ManejadorCadenas.class" afterPath="$PROJECT_DIR$/out/production/KahloV2/util/ManejadorCadenas.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KahloV2/vista/Configuracion_telemetria_controller$1.class" afterPath="$PROJECT_DIR$/out/production/KahloV2/vista/Configuracion_telemetria_controller$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KahloV2/vista/Configuracion_telemetria_controller$2.class" afterPath="$PROJECT_DIR$/out/production/KahloV2/vista/Configuracion_telemetria_controller$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KahloV2/vista/Configuracion_telemetria_controller.class" afterPath="$PROJECT_DIR$/out/production/KahloV2/vista/Configuracion_telemetria_controller.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KahloV2/vista/Espacio_trabajo_controller.class" afterPath="$PROJECT_DIR$/out/production/KahloV2/vista/Espacio_trabajo_controller.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KahloV2/vista/Instalacion_kahlov2_controller.class" afterPath="$PROJECT_DIR$/out/production/KahloV2/vista/Instalacion_kahlov2_controller.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KahloV2/vista/Kahlo_gui_controller$LectorDatos.class" afterPath="$PROJECT_DIR$/out/production/KahloV2/vista/Kahlo_gui_controller$LectorDatos.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KahloV2/vista/Kahlo_inicio_controller$4.class" afterPath="$PROJECT_DIR$/out/production/KahloV2/vista/Kahlo_inicio_controller$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KahloV2/vista/kahlo_gui_controller.class" afterPath="$PROJECT_DIR$/out/production/KahloV2/vista/kahlo_gui_controller.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KahloV2/vista/kahlo_inicio_controller$1.class" afterPath="$PROJECT_DIR$/out/production/KahloV2/vista/kahlo_inicio_controller$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KahloV2/vista/kahlo_inicio_controller$2.class" afterPath="$PROJECT_DIR$/out/production/KahloV2/vista/kahlo_inicio_controller$2.class" />
@@ -67,21 +32,23 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KahloV2/vista/panel_datos_controller.class" afterPath="$PROJECT_DIR$/out/production/KahloV2/vista/panel_datos_controller.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KahloV2/vista/panel_lata3D_controller.class" afterPath="$PROJECT_DIR$/out/production/KahloV2/vista/panel_lata3D_controller.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KahloV2/sample/sample.fxml" afterPath="$PROJECT_DIR$/out/production/KahloV2/sample/sample.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KahloV2/vista/kahlo_gui.fxml" afterPath="$PROJECT_DIR$/out/production/KahloV2/vista/kahlo_gui.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KahloV2/vista/kahlo_inicio.fxml" afterPath="$PROJECT_DIR$/out/production/KahloV2/vista/kahlo_inicio.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KahloV2/vista/panel_lata3D.fxml" afterPath="$PROJECT_DIR$/out/production/KahloV2/vista/panel_lata3D.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/KahloV2/vista/panel_dato.fxml" afterPath="$PROJECT_DIR$/out/production/KahloV2/vista/panel_dato.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/KahloV2.java" afterPath="$PROJECT_DIR$/src/KahloV2.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/kahlo_mision/Configuracion.java" afterPath="$PROJECT_DIR$/src/kahlo_mision/Configuracion.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/kahlo_mision/Manejador_de_Datos.java" afterPath="$PROJECT_DIR$/src/kahlo_mision/Manejador_de_Datos.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Main.java" afterPath="$PROJECT_DIR$/src/sample/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/sample.fxml" afterPath="$PROJECT_DIR$/src/sample/sample.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/serialport/PuertoSerial.java" afterPath="$PROJECT_DIR$/src/serialport/PuertoSerial.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/ManejadorArchivos.java" afterPath="$PROJECT_DIR$/src/util/ManejadorArchivos.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/ManejadorCadenas.java" afterPath="$PROJECT_DIR$/src/util/ManejadorCadenas.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vista/Grafica.java" afterPath="$PROJECT_DIR$/src/vista/Grafica.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vista/kahlo_gui.fxml" afterPath="$PROJECT_DIR$/src/vista/kahlo_gui.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vista/Configuracion_telemetria_controller.java" afterPath="$PROJECT_DIR$/src/vista/Configuracion_telemetria_controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vista/Espacio_trabajo_controller.java" afterPath="$PROJECT_DIR$/src/vista/Espacio_trabajo_controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vista/Instalacion_kahlov2_controller.java" afterPath="$PROJECT_DIR$/src/vista/Instalacion_kahlov2_controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vista/Kahlo_gui_controller.java" afterPath="$PROJECT_DIR$/src/vista/Kahlo_gui_controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vista/Kahlo_inicio_controller.java" afterPath="$PROJECT_DIR$/src/vista/Kahlo_inicio_controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vista/Panel_datos_controller.java" afterPath="$PROJECT_DIR$/src/vista/Panel_datos_controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vista/Panel_lata3D_controller.java" afterPath="$PROJECT_DIR$/src/vista/Panel_lata3D_controller.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vista/kahlo_inicio.fxml" afterPath="$PROJECT_DIR$/src/vista/kahlo_inicio.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vista/panel_lata3D.fxml" afterPath="$PROJECT_DIR$/src/vista/panel_lata3D.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vista/panel_dato.fxml" afterPath="$PROJECT_DIR$/src/vista/panel_dato.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -143,21 +110,7 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Panel_lata3D_controller.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/vista/Panel_lata3D_controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-              <folding>
-                <element signature="e#719#720#0" expanded="true" />
-                <element signature="e#768#769#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -184,11 +137,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/vista/kahlo_gui_opc1.fxml" />
-        <option value="$PROJECT_DIR$/src/vista/kahlo_gui_opc1_controller.java" />
-        <option value="$PROJECT_DIR$/src/mapa/JavascriptObject.java" />
-        <option value="$PROJECT_DIR$/src/mapa/IJavascriptRuntime.java" />
-        <option value="$PROJECT_DIR$/src/mapa/IWebEngine.java" />
         <option value="$PROJECT_DIR$/src/mapa/JavascriptEnum.java" />
         <option value="$PROJECT_DIR$/src/mapa/JavascriptRuntime.java" />
         <option value="$PROJECT_DIR$/src/mapa/GoogleMap.java" />
@@ -212,29 +160,34 @@
         <option value="$PROJECT_DIR$/src/vista/intalacion_kahlov2.fxml" />
         <option value="$PROJECT_DIR$/src/vista/Intalacion_kahlov2_controller.java" />
         <option value="$PROJECT_DIR$/src/kahlo_mision/KahloV2.java" />
-        <option value="$PROJECT_DIR$/src/vista/Instalacion_kahlov2_controller.java" />
         <option value="$PROJECT_DIR$/src/util/ManejadorCadenas.java" />
-        <option value="$PROJECT_DIR$/src/util/ManejadorArchivos.java" />
-        <option value="$PROJECT_DIR$/src/vista/Panel_datos_controller.java" />
         <option value="$PROJECT_DIR$/src/kahlo_mision/ConfiguracionSensor.java" />
-        <option value="$PROJECT_DIR$/src/vista/Espacio_trabajo_controller.java" />
         <option value="$PROJECT_DIR$/src/vista/configuracion_telemetria_controller.java" />
         <option value="$PROJECT_DIR$/src/kahlo_configuraciones/ManejadorConfiguraciones.java" />
         <option value="$PROJECT_DIR$/src/vista/PanelDatos.java" />
         <option value="$PROJECT_DIR$/src/kahlo_configuraciones/ConfiguracionTelemetria.java" />
         <option value="$PROJECT_DIR$/src/vista/TablaConfiguracionTelemetria.java" />
         <option value="$PROJECT_DIR$/src/kahlo_configuraciones/ConfiguracionSensor.java" />
-        <option value="$PROJECT_DIR$/src/kahlo_mision/Configuracion.java" />
         <option value="$PROJECT_DIR$/src/vista/Grafica.java" />
-        <option value="$PROJECT_DIR$/src/vista/Kahlo_inicio_controller.java" />
         <option value="$PROJECT_DIR$/src/vista/VistaMapa.java" />
-        <option value="$PROJECT_DIR$/src/vista/Configuracion_telemetria_controller.java" />
-        <option value="$PROJECT_DIR$/src/sample/Main.java" />
-        <option value="$PROJECT_DIR$/src/KahloV2.java" />
-        <option value="$PROJECT_DIR$/src/vista/Kahlo_gui_controller.java" />
-        <option value="$PROJECT_DIR$/src/serialport/PuertoSerial.java" />
-        <option value="$PROJECT_DIR$/src/kahlo_mision/Manejador_de_Datos.java" />
         <option value="$PROJECT_DIR$/src/vista/Panel_lata3D_controller.java" />
+        <option value="$PROJECT_DIR$/src/vista/Panel_datos_controller.java" />
+        <option value="$PROJECT_DIR$/src/componenetes/KStage.java" />
+        <option value="$PROJECT_DIR$/src/kahlo_configuraciones/ConfiguracionPuertoSerial.java" />
+        <option value="$PROJECT_DIR$/src/util/ManejadorPreferencias.java" />
+        <option value="$PROJECT_DIR$/src/vista/Espacio_trabajo_controller.java" />
+        <option value="$PROJECT_DIR$/src/util/ManejadorSerializables.java" />
+        <option value="$PROJECT_DIR$/src/vista/Configuracion_telemetria_controller.java" />
+        <option value="$PROJECT_DIR$/src/vista/configuracion_uart_controller.java" />
+        <option value="$PROJECT_DIR$/src/KahloV2.java" />
+        <option value="$PROJECT_DIR$/src/serialport/PuertoSerial.java" />
+        <option value="$PROJECT_DIR$/src/vista/Kahlo_inicio_controller.java" />
+        <option value="$PROJECT_DIR$/src/kahlo_mision/Configuracion.java" />
+        <option value="$PROJECT_DIR$/src/kahlo_mision/Manejador_de_Datos.java" />
+        <option value="$PROJECT_DIR$/src/vista/Kahlo_gui_controller.java" />
+        <option value="$PROJECT_DIR$/src/sample/Main.java" />
+        <option value="$PROJECT_DIR$/src/util/ManejadorArchivos.java" />
+        <option value="$PROJECT_DIR$/src/vista/Instalacion_kahlov2_controller.java" />
       </list>
     </option>
   </component>
@@ -288,7 +241,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -321,21 +286,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KahloV2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KahloV2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -357,20 +328,20 @@
     <property name="aspect.path.notification.shown" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="kahlo_mision" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
-      <recent name="vista" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="vista" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Program Files\Git\KahloV2\src\vista" />
       <recent name="C:\Program Files\Git\KahloV2\src\sample" />
       <recent name="$PROJECT_DIR$/src/vista" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="vista" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="kahlo_mision" />
     </key>
   </component>
   <component name="RunManager" selected="Application.KahloV2">
@@ -432,10 +403,7 @@
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
-      <method>
-        <option name="Make" enabled="true" />
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
+      <method />
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
@@ -458,10 +426,7 @@
       <Profilers>
         <option name="GAPID_DISABLE_PCS" value="false" />
       </Profilers>
-      <method>
-        <option name="Make" enabled="true" />
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
+      <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <module />
@@ -906,16 +871,17 @@
       <workItem from="1469028036039" duration="594000" />
       <workItem from="1469045658613" duration="31007000" />
       <workItem from="1469127829286" duration="72397000" />
-      <workItem from="1469248890823" duration="22713000" />
+      <workItem from="1469248890823" duration="44138000" />
+      <workItem from="1469397134811" duration="5255000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="245677000" />
+    <option name="totallyTimeSpent" value="272357000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -925,18 +891,17 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25709778" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28548896" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2635432" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26281112" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35015774" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -948,6 +913,7 @@
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4731861" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -963,7 +929,24 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="70" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/util/ManejadorArchivos.java</url>
+          <line>246</line>
+          <properties />
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/util/ManejadorArchivos.java</url>
+          <line>190</line>
+          <properties />
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="81" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -972,112 +955,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../../Java/jdk1.8.0_65/jre/lib/rt.jar!/java/util/TimerTask.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/kahlo_inicio.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_91/jre/lib/ext/RXTXcomm.jar!/gnu/io/CommPortIdentifier.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/serialport/Puerto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_91/src.zip!/java/io/InputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="99" column="15" selection-start-line="99" selection-start-column="15" selection-end-line="99" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kahlo_mision/Telemetria.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/espacio_trabajo.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/intalacion_kahlov2.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://MODULES/mdl-KahloV2">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>MODULES</ID>
-          <OriginalElement>mdl-KahloV2</OriginalElement>
-          <nodes>
-            <node x="" y="">mdl-KahloV2</node>
-            <node x="" y="">lib-RXTXcomm.jar</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="64.0" y="15.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Libraries</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/KahloV2">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>KahloV2</OriginalElement>
-          <nodes>
-            <node x="" y="">javafx.application.Application</node>
-            <node x="" y="">vista.Kahlo_inicio_controller.CallBack_Configuracion</node>
-            <node x="" y="">KahloV2</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="138.0" y="55.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://JAVA/kahlo_mision.Configuracion">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -1096,16 +973,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/Instalacion_kahlov2_controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="28" column="74" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_91/src.zip!/java/util/prefs/PreferencesFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -1117,6 +984,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="155" column="36" selection-start-line="155" selection-start-column="36" selection-end-line="155" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1153,22 +1021,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/ManejadorArchivos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="81" column="22" selection-start-line="81" selection-start-column="22" selection-end-line="81" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_91/javafx-src.zip!/javafx/scene/control/ListView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
           <caret line="230" column="24" selection-start-line="230" selection-start-column="24" selection-end-line="230" selection-end-column="24" />
-          <folding>
-            <element signature="e#14170#14171#0" expanded="false" />
-            <element signature="e#14230#14231#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1246,17 +1102,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/Espacio_trabajo_controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="52" column="5" selection-start-line="50" selection-start-column="4" selection-end-line="52" selection-end-column="5" />
-          <folding>
-            <element signature="e#1546#1547#0" expanded="false" />
-            <element signature="e#1620#1621#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_91/javafx-src.zip!/javafx/beans/property/StringPropertyBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -1285,68 +1130,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_91/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="1772" column="0" selection-start-line="1772" selection-start-column="0" selection-end-line="1772" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/Panel_datos_controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kahlo_configuraciones/ConfiguracionSensor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="57" column="39" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#ConfiguracionSensor#0" expanded="false" />
-            <element signature="class#2619:2854" expanded="false" />
-            <element signature="class#2916:3157" expanded="false" />
-            <element signature="class#3205:3436" expanded="false" />
-            <element signature="class#3481:3709" expanded="false" />
-            <element signature="class#3765:4299" expanded="false" />
-            <element signature="class#4355:4889" expanded="false" />
-            <element signature="class#4945:5479" expanded="false" />
-            <element signature="class#5531:6268" expanded="false" />
-            <element signature="method#setId_sensor_property#0;class#ConfiguracionSensor#0" expanded="false" />
-            <element signature="method#setEtiqueta_sensor_property#0;class#ConfiguracionSensor#0" expanded="false" />
-            <element signature="e#7553#7554#0" expanded="true" />
-            <element signature="e#7594#7595#0" expanded="true" />
-            <element signature="method#setValor_max_property#0;class#ConfiguracionSensor#0" expanded="false" />
-            <element signature="method#setValor_min_property#0;class#ConfiguracionSensor#0" expanded="false" />
-            <element signature="method#setHabilitado#0;class#ConfiguracionSensor#0" expanded="false" />
-            <element signature="e#9192#9193#0" expanded="true" />
-            <element signature="e#9250#9251#0" expanded="true" />
-            <element signature="method#arrayToString#0;class#ConfiguracionSensor#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kahlo_configuraciones/ConfiguracionTelemetria.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#contiene#0;class#ConfiguracionTelemetria#0" expanded="false" />
-            <element signature="docComment;method#getConfiguracion#0;class#ConfiguracionTelemetria#0" expanded="false" />
-            <element signature="method#getConfiguracion#0;class#ConfiguracionTelemetria#0" expanded="false" />
-            <element signature="method#init#0;class#ConfiguracionTelemetria#0" expanded="false" />
-            <element signature="method#getSensoresHabilitados#0;class#ConfiguracionTelemetria#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1384,50 +1167,169 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/Kahlo_inicio_controller.java">
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_91/javafx-src.zip!/javafx/stage/Stage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="189" column="59" selection-start-line="189" selection-start-column="59" selection-end-line="189" selection-end-column="59" />
+        <state relative-caret-position="183">
+          <caret line="1240" column="21" selection-start-line="1240" selection-start-column="16" selection-end-line="1240" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vista/Panel_lata3D_controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
           <folding>
-            <element signature="docComment;method#getConfiguracion#0;class#Kahlo_inicio_controller#0" expanded="false" />
-            <element signature="docComment;method#validaCamposConfiguracion#0;class#Kahlo_inicio_controller#0" expanded="false" />
-            <element signature="method#validaCamposConfiguracion#0;class#Kahlo_inicio_controller#0" expanded="false" />
-            <element signature="docComment;method#validaEspaciTrabajo#0;class#Kahlo_inicio_controller#0" expanded="false" />
-            <element signature="method#onClickEspaciodeTrabajo#0;class#Kahlo_inicio_controller#0" expanded="false" />
-            <element signature="method#onClickIntalar#0;class#Kahlo_inicio_controller#0" expanded="false" />
-            <element signature="docComment;method#lanzaDialogoSeleccionArchivo#0;class#Kahlo_inicio_controller#0" expanded="false" />
-            <element signature="method#lanzaDialogoSeleccionArchivo#0;class#Kahlo_inicio_controller#0" expanded="false" />
-            <element signature="docComment;method#muestraInformacionArchivoDescripcion#0;class#Kahlo_inicio_controller#0" expanded="false" />
-            <element signature="method#muestraInformacionArchivoDescripcion#0;class#Kahlo_inicio_controller#0" expanded="false" />
-            <element signature="docComment;method#setDatosEditables#0;class#Kahlo_inicio_controller#0" expanded="false" />
-            <element signature="method#setDatosEditables#0;class#Kahlo_inicio_controller#0" expanded="false" />
+            <element signature="class#1615:1845" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/kahlo_mision/Configuracion.java">
+    <entry file="file://$PROJECT_DIR$/src/vista/Panel_datos_controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+        <state relative-caret-position="396">
+          <caret line="45" column="11" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
           <folding>
-            <element signature="e#802#803#0" expanded="true" />
-            <element signature="e#847#848#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="class#1182:1314" expanded="false" />
+            <element signature="e#1247#1248#0" expanded="false" />
+            <element signature="e#1303#1304#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/componenetes/KStage.java" />
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_91/javafx-src.zip!/javafx/application/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
+        <state relative-caret-position="287">
+          <caret line="251" column="40" selection-start-line="251" selection-start-column="40" selection-end-line="251" selection-end-column="40" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_91/javafx-src.zip!/com/sun/javafx/application/LauncherImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-368">
+          <caret line="195" column="26" selection-start-line="195" selection-start-column="26" selection-end-line="195" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vista/configuracion_uart.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vista/PanelDatos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="24" column="68" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="68" />
+          <folding>
+            <element signature="docComment;method#actualiza_dato#0;class#PanelDatos#0" expanded="false" />
+            <element signature="e#1952#1953#0" expanded="false" />
+            <element signature="e#2011#2012#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kahlo_configuraciones/ConfiguracionPuertoSerial.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kahlo_configuraciones/ConfiguracionSensor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="57" column="39" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
+          <folding>
+            <element signature="docComment;class#ConfiguracionSensor#0" expanded="false" />
+            <element signature="method#setId_sensor_property#0;class#ConfiguracionSensor#0" expanded="false" />
+            <element signature="method#setEtiqueta_sensor_property#0;class#ConfiguracionSensor#0" expanded="false" />
+            <element signature="method#setValor_max_property#0;class#ConfiguracionSensor#0" expanded="false" />
+            <element signature="method#setValor_min_property#0;class#ConfiguracionSensor#0" expanded="false" />
+            <element signature="method#setHabilitado#0;class#ConfiguracionSensor#0" expanded="false" />
+            <element signature="method#arrayToString#0;class#ConfiguracionSensor#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/ManejadorPreferencias.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#setPreferencia#0;class#ManejadorPreferencias#0" expanded="false" />
+            <element signature="method#setPreferencia#0;class#ManejadorPreferencias#0" expanded="false" />
+            <element signature="docComment;method#getPreferencia#0;class#ManejadorPreferencias#0" expanded="false" />
+            <element signature="method#getPreferencia#0;class#ManejadorPreferencias#0" expanded="false" />
+            <element signature="docComment;method#getPreferences#0;class#ManejadorPreferencias#0" expanded="false" />
+            <element signature="method#getPreferences#0;class#ManejadorPreferencias#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vista/Espacio_trabajo_controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="34" column="46" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/ManejadorSerializables.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="59" column="58" selection-start-line="59" selection-start-column="58" selection-end-line="59" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vista/configuracion_uart_controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="109" column="14" selection-start-line="109" selection-start-column="14" selection-end-line="109" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#configuracion_uart_controller#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_91/jre/lib/ext/RXTXcomm.jar!/gnu/io/SerialPort.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="22" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/serialport/PuertoSerial.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="70" column="4" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/KahloV2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="99" column="8" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="8" />
+          <folding>
+            <element signature="method#start#0;class#KahloV2#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vista/Configuracion_telemetria_controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="53" column="91" selection-start-line="53" selection-start-column="83" selection-end-line="53" selection-end-column="91" />
+        <state relative-caret-position="268">
+          <caret line="59" column="117" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="117" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#validaCampos#0;class#Configuracion_telemetria_controller#0" expanded="false" />
@@ -1436,50 +1338,103 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/KahloV2.java">
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_91/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="45" column="41" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
+        <state relative-caret-position="235">
+          <caret line="1773" column="0" selection-start-line="1773" selection-start-column="0" selection-end-line="1773" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/PanelDatos.java">
+    <entry file="file://$PROJECT_DIR$/src/kahlo_mision/Configuracion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        <state relative-caret-position="278">
+          <caret line="66" column="41" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
           <folding>
-            <element signature="docComment;method#actualiza_dato#0;class#PanelDatos#0" expanded="false" />
-            <element signature="e#2011#2012#0" expanded="false" />
+            <element signature="e#1507#1508#0" expanded="true" />
+            <element signature="e#1555#1556#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/serialport/PuertoSerial.java">
+    <entry file="file://$PROJECT_DIR$/src/vista/Kahlo_inicio_controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="125" column="22" selection-start-line="125" selection-start-column="22" selection-end-line="125" selection-end-column="22" />
-          <folding />
+        <state relative-caret-position="17">
+          <caret line="243" column="31" selection-start-line="243" selection-start-column="31" selection-end-line="243" selection-end-column="31" />
+          <folding>
+            <element signature="class#2374:2708" expanded="false" />
+            <element signature="method#changed#0;class#2374:2708" expanded="false" />
+            <element signature="class#2747:3262" expanded="false" />
+            <element signature="class#3301:3771" expanded="false" />
+            <element signature="class#3811:4328" expanded="false" />
+            <element signature="method#cargaPuertos#0;class#Kahlo_inicio_controller#0" expanded="false" />
+            <element signature="method#onTerminarConfiguracion#0;class#Kahlo_inicio_controller#0" expanded="false" />
+            <element signature="method#getConfiguracionTelemetria#0;class#Kahlo_inicio_controller#0" expanded="false" />
+            <element signature="method#getConfiguracionPuertoSerial#0;class#Kahlo_inicio_controller#0" expanded="false" />
+            <element signature="method#setCallBack_configuracion#0;class#Kahlo_inicio_controller#0" expanded="false" />
+            <element signature="docComment;method#getConfiguracion#0;class#Kahlo_inicio_controller#0" expanded="false" />
+            <element signature="docComment;method#validaCamposConfiguracion#0;class#Kahlo_inicio_controller#0" expanded="false" />
+            <element signature="method#validaCamposConfiguracion#0;class#Kahlo_inicio_controller#0" expanded="false" />
+            <element signature="docComment;method#validaEspaciTrabajo#0;class#Kahlo_inicio_controller#0" expanded="false" />
+            <element signature="method#validaEspaciTrabajo#0;class#Kahlo_inicio_controller#0" expanded="false" />
+            <element signature="method#onClickEspaciodeTrabajo#0;class#Kahlo_inicio_controller#0" expanded="false" />
+            <element signature="method#onClickIntalar#0;class#Kahlo_inicio_controller#0" expanded="false" />
+            <element signature="docComment;method#lanzaDialogoSeleccionArchivo#0;class#Kahlo_inicio_controller#0" expanded="false" />
+            <element signature="method#onClickConfiguraTelemetria#0;class#Kahlo_inicio_controller#0" expanded="false" />
+            <element signature="method#onClickConfiguraPuertoSerial#0;class#Kahlo_inicio_controller#0" expanded="false" />
+            <element signature="docComment;method#muestraInformacionArchivoDescripcion#0;class#Kahlo_inicio_controller#0" expanded="false" />
+            <element signature="docComment;method#setDatosEditables#0;class#Kahlo_inicio_controller#0" expanded="false" />
+            <element signature="method#setDatosEditables#0;class#Kahlo_inicio_controller#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kahlo_configuraciones/ConfiguracionTelemetria.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#contiene#0;class#ConfiguracionTelemetria#0" expanded="false" />
+            <element signature="docComment;method#getConfiguracion#0;class#ConfiguracionTelemetria#0" expanded="false" />
+            <element signature="method#init#0;class#ConfiguracionTelemetria#0" expanded="false" />
+            <element signature="method#getSensoresHabilitados#0;class#ConfiguracionTelemetria#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vista/Kahlo_gui_controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="123" column="19" selection-start-line="123" selection-start-column="19" selection-end-line="123" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initDatos#0;class#Kahlo_gui_controller#0" expanded="false" />
+            <element signature="method#onClickEtiqueta#0;class#Kahlo_gui_controller#0" expanded="false" />
+            <element signature="class#4300:4679" expanded="false" />
+            <element signature="method#getEficiencia#0;class#Kahlo_gui_controller#0" expanded="false" />
+            <element signature="method#termianaSesion#0;class#Kahlo_gui_controller#0" expanded="false" />
+            <element signature="method#setCallBackFinSesion#0;class#Kahlo_gui_controller#0" expanded="false" />
+            <element signature="docComment;class#LectorDatos#0;class#Kahlo_gui_controller#0" expanded="false" />
+            <element signature="class#CallBackFinSesion#0;class#Kahlo_gui_controller#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/kahlo_mision/Manejador_de_Datos.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="99" column="8" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="8" />
+        <state relative-caret-position="51">
+          <caret line="109" column="23" selection-start-line="109" selection-start-column="23" selection-end-line="109" selection-end-column="23" />
           <folding>
             <element signature="method#Manejador_de_Datos#0;class#Manejador_de_Datos#0" expanded="false" />
             <element signature="method#initMision_Prueba#0;class#Manejador_de_Datos#0" expanded="false" />
-            <element signature="method#initArchivo#0;class#Manejador_de_Datos#0" expanded="false" />
             <element signature="method#getTelemetria#0;class#Manejador_de_Datos#0" expanded="false" />
             <element signature="method#getTelemetriaSerial#0;class#Manejador_de_Datos#0" expanded="false" />
-            <element signature="method#getTelemetriaArchivo#0;class#Manejador_de_Datos#0" expanded="false" />
             <element signature="method#getValorString#0;class#Manejador_de_Datos#0" expanded="false" />
             <element signature="method#getValDecimal#0;class#Manejador_de_Datos#0" expanded="false" />
             <element signature="method#getValorLong#0;class#Manejador_de_Datos#0" expanded="false" />
             <element signature="method#getCeros#0;class#Manejador_de_Datos#0" expanded="false" />
             <element signature="docComment;method#guardaMision#0;class#Manejador_de_Datos#0" expanded="false" />
-            <element signature="method#guardaMision#0;class#Manejador_de_Datos#0" expanded="false" />
             <element signature="docComment;method#cierraPuertoSerial#0;class#Manejador_de_Datos#0" expanded="false" />
             <element signature="method#cierraPuertoSerial#0;class#Manejador_de_Datos#0" expanded="false" />
             <element signature="method#getDir#0;class#Manejador_de_Datos#0" expanded="false" />
@@ -1487,35 +1442,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/Kahlo_gui_controller.java">
+    <entry file="file://$PROJECT_DIR$/src/util/ManejadorArchivos.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="92" column="62" selection-start-line="92" selection-start-column="62" selection-end-line="92" selection-end-column="62" />
+        <state relative-caret-position="171">
+          <caret line="248" column="33" selection-start-line="248" selection-start-column="33" selection-end-line="248" selection-end-column="33" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initialize#0;class#Kahlo_gui_controller#0" expanded="false" />
-            <element signature="method#initDatos#0;class#Kahlo_gui_controller#0" expanded="false" />
-            <element signature="docComment;method#setConfiguracion#0;class#Kahlo_gui_controller#0" expanded="false" />
-            <element signature="method#onClickEtiqueta#0;class#Kahlo_gui_controller#0" expanded="false" />
-            <element signature="method#actualizaDatos#0;class#Kahlo_gui_controller#0" expanded="false" />
-            <element signature="method#getEficiencia#0;class#Kahlo_gui_controller#0" expanded="false" />
-            <element signature="method#termianaSesion#0;class#Kahlo_gui_controller#0" expanded="false" />
-            <element signature="method#setCallBackFinSesion#0;class#Kahlo_gui_controller#0" expanded="false" />
-            <element signature="docComment;class#LectorDatos#0;class#Kahlo_gui_controller#0" expanded="false" />
-            <element signature="class#LectorDatos#0;class#Kahlo_gui_controller#0" expanded="false" />
-            <element signature="class#CallBackFinSesion#0;class#Kahlo_gui_controller#0" expanded="false" />
+            <element signature="docComment;method#getContenidoArchivoBytes#0;class#ManejadorArchivos#0" expanded="false" />
+            <element signature="docComment;method#copiar#0;class#ManejadorArchivos#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vista/Panel_lata3D_controller.java">
+    <entry file="file://$PROJECT_DIR$/src/vista/Instalacion_kahlov2_controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+        <state relative-caret-position="279">
+          <caret line="121" column="29" selection-start-line="121" selection-start-column="29" selection-end-line="121" selection-end-column="29" />
           <folding>
-            <element signature="e#719#720#0" expanded="true" />
-            <element signature="e#768#769#0" expanded="true" />
+            <element signature="docComment;method#instala#0;class#Instalacion_kahlov2_controller#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="63" column="61" selection-start-line="63" selection-start-column="61" selection-end-line="63" selection-end-column="61" />
+          <folding />
         </state>
       </provider>
     </entry>

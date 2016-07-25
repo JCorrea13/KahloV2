@@ -183,19 +183,16 @@ public class ManejadorArchivos {
      * Este metodo crea o sobreescribe el archivo que que se pasa como parametro
      * @param ruta ruta y nombre del archivo (ruta/name.extension)
      * @param contenido array de bytes que se excribiran en el archivo
-     * @param codif array de bytes que representa las codificaciones    
      * @throws IOException 
      */
-    public void setContenidoArchivoByte(String ruta, byte [] contenido, byte [] codif) throws IOException{
+    public void setContenidoArchivoByte(String ruta, byte [] contenido) throws IOException{
 
         //validamos el directorio de trabajo
         verificaDiretorioTrabajo(ruta.substring(0, ruta.lastIndexOf(File.separator)));
         
         FileOutputStream fos = new FileOutputStream(ruta, false);
         DataOutputStream salida = new DataOutputStream(fos);
-        
-        if(codif != null)
-            salida.write(codif);
+
         salida.write(contenido);
         salida.close();
     }
@@ -223,8 +220,36 @@ public class ManejadorArchivos {
             f.mkdirs();
     }
 
+    /**
+     * Este metodo recupera el contenido del archivo en la ruta que se
+     * como parametro y lo lee en forma de bytes
+     * @param ruta ruta del archivo que se desea leer
+     * @return Array con bytes del archivo
+     * @throws IOException
+     */
     public byte[] getContenidoArchivoBytes(String ruta) throws IOException{
         Path path = Paths.get(ruta);
         return Files.readAllBytes(path);
+    }
+
+    /**
+     * Este metod copia el archivo de la ruta origen
+     * en la ruta destino.
+     *
+     * @param origen archivo que se desea copiar
+     * @param destino ruta en la que se desea copiar
+     * @return True si la operacion tiene exito False en otro caso
+     */
+    public boolean copiar(String origen, String destino){
+        byte [] o;
+
+        try {
+            o = getContenidoArchivoBytes(origen);
+            setContenidoArchivoByte(destino, o);
+        } catch (IOException e) {
+            return false;
+        }
+
+        return false;
     }
 }

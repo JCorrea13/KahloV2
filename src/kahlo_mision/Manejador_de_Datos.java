@@ -4,10 +4,13 @@ import com.sun.istack.internal.NotNull;
 import com.sun.xml.internal.ws.util.ByteArrayBuffer;
 import gnu.io.CommPortIdentifier;
 import gnu.io.PortInUseException;
+import kahlo_configuraciones.ConfiguracionPuertoSerial;
 import kahlo_configuraciones.ConfiguracionSensor;
 import kahlo_configuraciones.ConfiguracionTelemetria;
 import serialport.PuertoSerial;
 import util.ManejadorArchivos;
+import util.ManejadorPreferencias;
+import vista.Configuracion_telemetria_controller;
 import vista.Espacio_trabajo_controller;
 
 import java.awt.image.DataBufferByte;
@@ -20,6 +23,8 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.prefs.Preferences;
 import java.util.prefs.PreferencesFactory;
+
+import static vista.Configuracion_telemetria_controller.CLAVE_ARCHIVO_TELEMETRIA;
 
 /**
  * Esta clase se encarga de la lectura e interpretacion
@@ -38,22 +43,33 @@ public class Manejador_de_Datos {
     private ByteArrayBuffer datos;
     private Configuracion configuracion;
     private byte [] archivo;
-    private int indice_archivo;
+    private int indice_archivo = 0;
     private ConfiguracionTelemetria configuracionTelemetria;
+    private ConfiguracionPuertoSerial configuracionPuertoSerial;
     private int cadenas_recibidas = 0;
 
-    public Manejador_de_Datos(@NotNull Configuracion configuracion,@NotNull ConfiguracionTelemetria configuracionTelemetria) throws PortInUseException, IOException {
+    public Manejador_de_Datos(@NotNull Configuracion configuracion,@NotNull ConfiguracionTelemetria configuracionTelemetria
+            , @NotNull ConfiguracionPuertoSerial configuracionPuertoSerial) throws PortInUseException, IOException {
+
         this.configuracion = configuracion;
         this.configuracionTelemetria = configuracionTelemetria;
+        this.configuracionPuertoSerial = configuracionPuertoSerial;
 
         if(configuracion.getTipo() == Configuracion.Tipo.ARCHIVO)
             initArchivo(configuracion.getRutaArchivo());
         else
             initMision_Prueba(configuracion.getCommPortIdentifier());
+
     }
 
     private void initMision_Prueba(CommPortIdentifier commPortIdentifier) throws PortInUseException, IOException {
-        puertoSerial = new PuertoSerial(commPortIdentifier, 9600, 8, 2, false);
+        //Configuracion default estandar uart (velocidad = 9600, bits datos = 8, bist parada = 2, paridad = NONE)
+        puertoSerial = new PuertoSerial(commPortIdentifier
+                , configuracionPuertoSerial.getVelocidad()
+                , configuracionPuertoSerial.getBits_datos()
+                , configuracionPuertoSerial.getBits_parada()
+                , configuracionPuertoSerial.getParidad());
+
         datos_bruto = new ByteArrayBuffer();
         datos = new ByteArrayBuffer();
     }
@@ -86,11 +102,19 @@ public class Manejador_de_Datos {
     }
 
     private HashMap<String, String> getTelemetriaArchivo() throws IOException {
-        //Aqui se espera la logica de leer los siguientes bytes correspondienetes
-        //del archivo
-        byte [] b = Arrays.copyOfRange(archivo, indice_archivo, indice_archivo + configuracionTelemetria.getTamanio_telemetria());
+        int nuevo_indice = indice_archivo + configuracionTelemetria.getTamanio_telemetria();
 
-       return interpretaDatos(b, configuracionTelemetria.getTamanio_telemetria());
+        //validamos que seguimos leyendo dentro del tamanio del archivo
+        if(nuevo_indice > archivo.length-1) {
+            System.out.println("Fin del archivo");
+            return null;
+        }
+
+        //Leemos los siguientes bytes del archivo
+        byte [] b = Arrays.copyOfRange(archivo, indice_archivo, nuevo_indice);
+        indice_archivo += configuracionTelemetria.getTamanio_telemetria();
+
+        return interpretaDatos(b, configuracionTelemetria.getTamanio_telemetria());
     }
 
     private HashMap<String, String> interpretaDatos(byte [] b, int datos_leidos) throws IOException {
@@ -102,8 +126,10 @@ public class Manejador_de_Datos {
             //Leemos el byte de inicio de telemetria en caso de estar habilitado y validamos los bytes leidos
             c_sensor = configuracionTelemetria.getConfiguracion("K");
             if(c_sensor != null)
-                if(!getValorString(c_sensor.getBytes_property(), b).equals(c_sensor.getEtiqueta_sensor_property())){
-                    puertoSerial.corrige();
+                if(!getValorString(c_sensor.getBytes_property(), b).equals(c_sensor.getEtiqueta_sensor_property())) {
+                    if (configuracion.getTipo() == Configuracion.Tipo.ARCHIVO) indice_archivo++;
+                    else puertoSerial.corrige();
+
                     return t;
                 }
 
@@ -190,6 +216,12 @@ public class Manejador_de_Datos {
 
         //guardamos los datos
         ma.agregaContenidoArchivoByte(getDir(dir + configuracion.getNombre() + ".kar",0), datos.getRawData());
+
+        //copiamos el archivo de configuracion de telemetria si es que existe
+        File f = new File(ManejadorPreferencias.getPreferencia(Configuracion_telemetria_controller.class.getName()
+                                                                ,CLAVE_ARCHIVO_TELEMETRIA, ""));
+        if(f.exists())
+            new ManejadorArchivos().copiar(f.getAbsolutePath(), getDir(dir + configuracion.getNombre() + ".kT",0));
     }
 
     /**

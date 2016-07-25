@@ -39,6 +39,7 @@
               <MenuItem mnemonicParsing="false" onAction="#onClickIntalar" text="Intalación de Kahlo V2" />
                   <MenuItem mnemonicParsing="false" onAction="#onClickEspaciodeTrabajo" text="Espacio de trabajo" />
                   <MenuItem mnemonicParsing="false" onAction="#onClickConfiguraTelemetria" text="Configuración Telemetria" />
+                  <MenuItem mnemonicParsing="false" onAction="#onClickConfiguraPuertoSerial" text="Configuración Puerto Serial" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Ayuda">

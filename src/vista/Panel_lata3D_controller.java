@@ -1,5 +1,6 @@
 package vista;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.geometry.Point3D;
 import javafx.scene.shape.Cylinder;
@@ -16,12 +17,6 @@ public class Panel_lata3D_controller {
     @FXML
     private Cylinder lata;
 
-    /*private double roll = 12.37722;
-    private double yaw = 3.741706;
-    private double pitch = -67.89284;
-    private double roll = -20.599962;
-    private double yaw = 6.4251714;
-    private double pitch = -16.632632;*/
     private double roll = 0;
     private double yaw = 0;
     private double pitch = 0;
@@ -50,8 +45,13 @@ public class Panel_lata3D_controller {
             if(d!=0d){
                 double den=2d*Math.sin(d);
                 Point3D p= new Point3D((A32-A23)/den,(A13-A31)/den,(A21-A12)/den);
-                lata.setRotationAxis(p);
-                lata.setRotate(Math.toDegrees(d));
+                Platform.runLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        lata.setRotate(Math.toDegrees(d));
+                        lata.setRotationAxis(p);
+                    }
+                });
             }
     }
 

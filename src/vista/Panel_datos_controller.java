@@ -1,5 +1,6 @@
 package vista;
 
+import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -37,7 +38,12 @@ public class Panel_datos_controller {
     }
 
     public void setValor(String valor){
-        txt_valor.setText(valor);
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                txt_valor.setText(valor);
+            }
+        });
     }
 
     public void setCallBackClick(CallBackClick callBackClick){

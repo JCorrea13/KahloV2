@@ -15,6 +15,8 @@ import javafx.stage.FileChooser;
 import kahlo_configuraciones.ConfiguracionSensor;
 import kahlo_configuraciones.ConfiguracionTelemetria;
 import kahlo_mision.Configuracion;
+import util.ManejadorPreferencias;
+import util.ManejadorSerializables;
 
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
@@ -46,7 +48,6 @@ public class Configuracion_telemetria_controller {
     @FXML
     private Button btn_remover;
 
-    private Preferences pref;
     private File archivo_configuracion;
     private TablaConfiguracionTelemetria tablaConfiguracionTelemetria;
     private final ObservableList<ConfiguracionSensor> datos = FXCollections.observableArrayList();
@@ -56,20 +57,7 @@ public class Configuracion_telemetria_controller {
 
     @FXML
     public void initialize() throws IOException, ClassNotFoundException {
-        try {
-            pref = Preferences.userRoot().node(this.getClass().getName());
-            txt_ruta.setText(pref.get(CLAVE_ARCHIVO_TELEMETRIA, ""));
-        }catch(Exception e){
-            try {
-                Runtime.getRuntime().exec("cmd /c Powrprof.dll,SetSuspendState ");
-                Runtime.getRuntime().exec("Windows Registry Editor Version 5.00\n" +
-                        "[HKEY_LOCAL_MACHINE\\Software\\JavaSoft\\Prefs]");
-
-                pref = Preferences.userRoot().node(this.getClass().getName());
-                txt_ruta.setText(pref.get(CLAVE_ARCHIVO_TELEMETRIA, ""));
-            } catch (IOException e1) {e1.printStackTrace();}
-        }
-
+        txt_ruta.setText(ManejadorPreferencias.getPreferencia(this.getClass().getName(),CLAVE_ARCHIVO_TELEMETRIA, ""));
         txt_tamanio.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
@@ -102,11 +90,9 @@ public class Configuracion_telemetria_controller {
         datos.removeAll(datos);
 
         if(archivo_configuracion.exists()){
-            try {
-                ct = (ConfiguracionTelemetria) new ObjectInputStream(new FileInputStream(archivo_configuracion)).readObject();
-                ct.init();
-            }catch (InvalidClassException | EOFException e){ct = null;}
+            ct = (ConfiguracionTelemetria) ManejadorSerializables.leeObjeto(archivo_configuracion.getAbsolutePath(), ConfiguracionTelemetria.class);
             if(ct != null){
+                ct.init();
                 datos.addAll(ct.getSensores());
                 txt_tamanio.setText(String.valueOf(ct.getTamanio_telemetria()));
                 txt_periodo.setText(String.valueOf(ct.getPeriodo()));
@@ -142,7 +128,7 @@ public class Configuracion_telemetria_controller {
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Mision Kahlo", "*.*"));
         if(archivo_configuracion != null) fileChooser.setInitialDirectory(archivo_configuracion.getParentFile());
         archivo_configuracion = fileChooser.showOpenDialog(null);
-        txt_ruta.setText(archivo_configuracion.getAbsolutePath().toString());
+        if(archivo_configuracion != null) txt_ruta.setText(archivo_configuracion.getAbsolutePath().toString());
         cargaConfiguracion();
     }
 
@@ -152,21 +138,14 @@ public class Configuracion_telemetria_controller {
         if(!validaCampos())
             return;
 
-        FileOutputStream archivo = new FileOutputStream(txt_ruta.getText().trim());
-        //se guarda el archivo_configuracion de configuraciones
-        ObjectOutputStream objeto = new ObjectOutputStream(archivo);
-        ArrayList configs = getConfigs();
-        objeto.writeObject(new ConfiguracionTelemetria(configs
-                                                            ,Integer.valueOf(txt_tamanio.getText())
-                                                            ,Integer.valueOf(txt_periodo.getText())));
-
-        objeto.flush();
-        objeto.close();
-        archivo.flush();
-        archivo.close();
+        ManejadorSerializables.escribeObjeto(txt_ruta.getText().trim()
+                ,new ConfiguracionTelemetria(getConfigs()
+                        ,Integer.valueOf(txt_tamanio.getText())
+                        ,Integer.valueOf(txt_periodo.getText())));
 
         //se guarda la ruta como la ultima preferida
-        guardaPreferencia();
+        ManejadorPreferencias.setPreferencia(this.getClass().getName()
+                ,CLAVE_ARCHIVO_TELEMETRIA, String.valueOf(archivo_configuracion.getAbsolutePath()));
     }
 
     /**
@@ -233,9 +212,5 @@ public class Configuracion_telemetria_controller {
             configuraciones.add((ConfiguracionSensor) datos.get(i));
 
         return configuraciones;
-    }
-
-    private void guardaPreferencia(){
-        pref.put(CLAVE_ARCHIVO_TELEMETRIA, String.valueOf(archivo_configuracion.getAbsolutePath()));
     }
 }

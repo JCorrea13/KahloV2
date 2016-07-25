@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane prefHeight="276.0" prefWidth="376.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vista.configuracion_uart_controller">
+   <header>
+      <Label alignment="CENTER" text="Configuració Puerto Serial (UART)" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </header>
+   <content>
+      <Pane prefHeight="0.0" prefWidth="493.0">
+         <children>
+            <Label layoutX="58.0" layoutY="18.0" text="Velocidad (baudios): " />
+            <Label layoutX="58.0" layoutY="51.0" text="Bits de parada: " />
+            <TextField fx:id="txt_parada" layoutX="169.0" layoutY="47.0" />
+            <Label layoutX="58.0" layoutY="84.0" text="Bits de datos: " />
+            <TextField fx:id="txt_datos" layoutX="169.0" layoutY="80.0" />
+            <Label layoutX="58.0" layoutY="115.0" text="Paridad:" />
+            <ComboBox fx:id="cbo_velocidad" layoutX="168.0" layoutY="14.0" prefWidth="150.0" />
+            <ComboBox fx:id="cbo_paridad" layoutX="168.0" layoutY="111.0" prefWidth="150.0" />
+            <Label layoutX="14.0" layoutY="148.0" text="Ruta:" />
+            <TextField fx:id="txt_ruta" layoutX="48.0" layoutY="144.0" prefHeight="25.0" prefWidth="289.0" />
+            <Button layoutX="343.0" layoutY="144.0" mnemonicParsing="false" onAction="#lanzaDialogoSeleccionArchivo" text="..." />
+            <Button layoutX="16.0" layoutY="177.0" mnemonicParsing="false" onAction="#onClickGuardar" prefHeight="25.0" prefWidth="352.0" text="Guardar" />
+         </children>
+      </Pane>
+   </content>
+   <buttonTypes>
+      <ButtonType fx:constant="FINISH" />
+   </buttonTypes>
+</DialogPane>

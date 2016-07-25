@@ -1,15 +1,22 @@
 import com.sun.istack.internal.NotNull;
 import gnu.io.PortInUseException;
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
+import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.stage.WindowEvent;
+import kahlo_configuraciones.ConfiguracionPuertoSerial;
 import kahlo_configuraciones.ConfiguracionTelemetria;
 import kahlo_mision.Configuracion;
 import vista.Kahlo_gui_controller;
@@ -41,6 +48,9 @@ public class KahloV2 extends Application implements CallBack_Configuracion, Call
     private Scene escena_inicio;
     private Scene escena_consola;
 
+    //control de cerrado de apliacion
+    private boolean puedeSalir = true;
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         this.primaryStage = primaryStage;
@@ -54,11 +64,27 @@ public class KahloV2 extends Application implements CallBack_Configuracion, Call
 
         escena_inicio = new Scene(inicio, 930, 491);
         escena_consola = new Scene(consola);
+        puedeSalir = true;
 
         primaryStage.setTitle("Kahlo V2");
         primaryStage.setScene(escena_inicio);
         primaryStage.getIcons().add(new Image("file:recursos/KahloIcono.png"));
 
+        Platform.setImplicitExit(false);
+        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent event) {
+                if(puedeSalir)
+                    Platform.exit();
+                else{
+                    event.consume();
+                    Alert a = new Alert(Alert.AlertType.INFORMATION);
+                    a.setContentText("Para cerrar la consola debes terminar la sesión");
+                    a.setTitle("Consola");
+                    a.show();
+                }
+            }
+        });
         primaryStage.show();
     }
 
@@ -68,13 +94,16 @@ public class KahloV2 extends Application implements CallBack_Configuracion, Call
     }
 
     @Override
-    public void onGetConfiguracion(Configuracion configuracion, ConfiguracionTelemetria configuracionTelemetria){
+    public void onGetConfiguracion(Configuracion configuracion, ConfiguracionTelemetria configuracionTelemetria
+            , ConfiguracionPuertoSerial configuracionPuertoSerial){
+
         primaryStage.setScene(escena_consola);
+        puedeSalir = false;
         primaryStage.setMaximized(true);
         Kahlo_gui_controller controller_consola = loader_consola.getController();
         controller_consola.setCallBackFinSesion(this);
         try {
-            controller_consola.setConfiguracion(configuracion, configuracionTelemetria);
+            controller_consola.setConfiguracion(configuracion, configuracionTelemetria, configuracionPuertoSerial);
         } catch (PortInUseException e) {e.printStackTrace();
         } catch (IOException e) {e.printStackTrace();}
 

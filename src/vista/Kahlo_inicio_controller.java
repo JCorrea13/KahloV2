@@ -14,11 +14,13 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
+import kahlo_configuraciones.ConfiguracionPuertoSerial;
 import kahlo_configuraciones.ConfiguracionTelemetria;
 import kahlo_mision.Configuracion;
 import serialport.Puerto;
 import serialport.PuertoSerial;
 import util.ManejadorArchivos;
+import util.ManejadorPreferencias;
 
 import javax.xml.ws.Action;
 import java.io.*;
@@ -34,6 +36,7 @@ import java.util.Stack;
 import java.util.prefs.Preferences;
 
 import static vista.Configuracion_telemetria_controller.CLAVE_ARCHIVO_TELEMETRIA;
+import static vista.configuracion_uart_controller.CLAVE_PUERTO_SERIAL;
 
 /**
  * Esta clase es el controlador de la interfaz
@@ -151,14 +154,45 @@ public class Kahlo_inicio_controller {
     @FXML
     private void onTerminarConfiguracion() throws IOException, ClassNotFoundException {
         if(validaCamposConfiguracion())
-            if(callBack_configuracion != null)
-                callBack_configuracion.onGetConfiguracion(getConfiguracion(), getConfiguracionTelemetria());
+            if(callBack_configuracion != null) {
+
+                ConfiguracionTelemetria ct = getConfiguracionTelemetria();
+                ConfiguracionPuertoSerial cps = getConfiguracionPuertoSerial();
+
+                if(ct == null ||(!rbtn_archivo.isSelected() && cps == null)){
+                    Alert a = new Alert(Alert.AlertType.ERROR);
+                    a.setHeaderText("Algo anda mal :|");
+                    a.setContentText("Verifica la configuraciones: Telemetria, Puerto Serial");
+                    a.setTitle("Error Configuración");
+                    a.show();
+                }
+
+
+                callBack_configuracion.onGetConfiguracion(getConfiguracion(), ct, cps);
+            }
     }
 
     private ConfiguracionTelemetria getConfiguracionTelemetria() throws IOException, ClassNotFoundException {
-        Preferences pref = Preferences.userRoot().node(Configuracion_telemetria_controller.class.getName());
-        File f = new File(pref.get(CLAVE_ARCHIVO_TELEMETRIA, "").trim());
-        ConfiguracionTelemetria ct = null;
+        File f = null;
+        ConfiguracionTelemetria ct;
+
+        //intentamos recuperar el arvhivo de telemetria correspondiente en caso de ser sesion de archivo
+        if(rbtn_archivo.isSelected()){
+            String archivo_t = archivo.getParent() + File.separator + archivo.getName().substring(0,archivo.getName().lastIndexOf(".")) + ".kT";
+            f = new File(archivo_t);
+            ct = null;
+
+            if(f.exists()){
+                ct = (ConfiguracionTelemetria) new ObjectInputStream(new FileInputStream(f)).readObject();
+                ct.init();
+
+                return ct;
+            }
+        }
+
+        f = new File(ManejadorPreferencias.getPreferencia(Configuracion_telemetria_controller.class.getName()
+                ,CLAVE_ARCHIVO_TELEMETRIA, "").trim());
+        ct = null;
         if(f.exists()){
             ct = (ConfiguracionTelemetria) new ObjectInputStream(new FileInputStream(f)).readObject();
             ct.init();
@@ -167,8 +201,21 @@ public class Kahlo_inicio_controller {
         return ct;
     }
 
+    private ConfiguracionPuertoSerial getConfiguracionPuertoSerial() throws IOException, ClassNotFoundException {
+        File f = new File(ManejadorPreferencias.getPreferencia(configuracion_uart_controller.class.getName()
+                ,CLAVE_PUERTO_SERIAL, "").trim());
+        ConfiguracionPuertoSerial cps = null;
+        if(f.exists()){
+            cps = (ConfiguracionPuertoSerial) new ObjectInputStream(new FileInputStream(f)).readObject();
+        }
+
+        return cps;
+    }
+
     public interface CallBack_Configuracion {
-        void onGetConfiguracion(Configuracion configuracion, ConfiguracionTelemetria configuracionTelemetria);
+        void onGetConfiguracion(Configuracion configuracion
+                , ConfiguracionTelemetria configuracionTelemetria
+                , ConfiguracionPuertoSerial configuracionPuertoSerial);
     }
 
     public static void setCallBack_configuracion(CallBack_Configuracion callBack_configuracion){
@@ -320,6 +367,17 @@ public class Kahlo_inicio_controller {
     @FXML
     private void onClickConfiguraTelemetria() throws IOException {
         FXMLLoader loader_dialog = new FXMLLoader(getClass().getResource("configuracion_telemetria.fxml"));
+        DialogPane d = loader_dialog.load();
+
+        Alert a = new Alert(Alert.AlertType.NONE);
+        a.setTitle("Configuración");
+        a.setDialogPane(d);
+        a.showAndWait();
+    }
+
+    @FXML
+    private void onClickConfiguraPuertoSerial() throws IOException {
+        FXMLLoader loader_dialog = new FXMLLoader(getClass().getResource("configuracion_uart.fxml"));
         DialogPane d = loader_dialog.load();
 
         Alert a = new Alert(Alert.AlertType.NONE);
