@@ -17,6 +17,7 @@ import javafx.stage.FileChooser;
 import kahlo_configuraciones.ConfiguracionPuertoSerial;
 import kahlo_configuraciones.ConfiguracionTelemetria;
 import kahlo_mision.Configuracion;
+import kahlo_mision.KahloV2_Static;
 import serialport.Puerto;
 import serialport.PuertoSerial;
 import util.ManejadorArchivos;
@@ -359,7 +360,7 @@ public class Kahlo_inicio_controller {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Selecciona ruta");
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Mision Kahlo", "*.kab", "*.kar"));
-        if(archivo != null) fileChooser.setInitialDirectory(archivo.getParentFile());
+        if(archivo != null  && archivo.exists()) fileChooser.setInitialDirectory(archivo.getParentFile());
         archivo = fileChooser.showOpenDialog(null);
         muestraInformacionArchivoDescripcion();
     }

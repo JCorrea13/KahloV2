@@ -19,10 +19,9 @@ import javafx.stage.WindowEvent;
 import kahlo_configuraciones.ConfiguracionPuertoSerial;
 import kahlo_configuraciones.ConfiguracionTelemetria;
 import kahlo_mision.Configuracion;
+import kahlo_mision.KahloV2_Static;
 import vista.Kahlo_gui_controller;
 import vista.Kahlo_inicio_controller;
-import vista.Kahlo_inicio_controller.CallBack_Configuracion;
-import vista.Kahlo_gui_controller.CallBackFinSesion;
 
 import java.io.IOException;
 
@@ -32,10 +31,10 @@ import java.io.IOException;
  * @author Jose Correa
  * @version 1.0.0
  */
-public class KahloV2 extends Application implements CallBack_Configuracion, CallBackFinSesion {
+public class KahloV2 extends Application implements Kahlo_inicio_controller.CallBack_Configuracion, Kahlo_gui_controller.CallBackFinSesion {
 
     public static final String KEY_NODO_PREFS = "KAHLOV2";
-    private Stage primaryStage;
+    //private Stage primaryStage;
 
     //Objetos para el manejo de la interfaz grafica
     private FXMLLoader loader_inicio;
@@ -53,7 +52,7 @@ public class KahloV2 extends Application implements CallBack_Configuracion, Call
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        this.primaryStage = primaryStage;
+        KahloV2_Static.primaryStage = primaryStage;
 
         loader_inicio = new FXMLLoader(getClass().getResource("vista/kahlo_inicio.fxml"));
         loader_consola = new FXMLLoader(getClass().getResource("vista/kahlo_gui.fxml"));
@@ -97,9 +96,9 @@ public class KahloV2 extends Application implements CallBack_Configuracion, Call
     public void onGetConfiguracion(Configuracion configuracion, ConfiguracionTelemetria configuracionTelemetria
             , ConfiguracionPuertoSerial configuracionPuertoSerial){
 
-        primaryStage.setScene(escena_consola);
+        KahloV2_Static.primaryStage.setScene(escena_consola);
         puedeSalir = false;
-        primaryStage.setMaximized(true);
+        KahloV2_Static.primaryStage.setMaximized(true);
         Kahlo_gui_controller controller_consola = loader_consola.getController();
         controller_consola.setCallBackFinSesion(this);
         try {
@@ -112,7 +111,7 @@ public class KahloV2 extends Application implements CallBack_Configuracion, Call
     @Override
     public void onTerminaSesion() {
         try {
-            start(primaryStage);
+            start(KahloV2_Static.primaryStage);
         } catch (Exception e) {e.printStackTrace();}
     }
 }

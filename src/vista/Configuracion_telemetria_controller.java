@@ -15,6 +15,7 @@ import javafx.stage.FileChooser;
 import kahlo_configuraciones.ConfiguracionSensor;
 import kahlo_configuraciones.ConfiguracionTelemetria;
 import kahlo_mision.Configuracion;
+import kahlo_mision.KahloV2_Static;
 import util.ManejadorPreferencias;
 import util.ManejadorSerializables;
 
@@ -126,7 +127,7 @@ public class Configuracion_telemetria_controller {
         fileChooser.setTitle("Selecciona ruta");
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Mision Kahlo", "*.kT"));
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Mision Kahlo", "*.*"));
-        if(archivo_configuracion != null) fileChooser.setInitialDirectory(archivo_configuracion.getParentFile());
+        if(archivo_configuracion != null && archivo_configuracion.exists()) fileChooser.setInitialDirectory(archivo_configuracion.getParentFile());
         archivo_configuracion = fileChooser.showOpenDialog(null);
         if(archivo_configuracion != null) txt_ruta.setText(archivo_configuracion.getAbsolutePath().toString());
         cargaConfiguracion();
