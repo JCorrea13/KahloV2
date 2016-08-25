@@ -9,6 +9,7 @@ import javafx.scene.web.WebView;
 import util.ManejadorArchivos;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 /**
@@ -68,7 +69,23 @@ public class VistaMapa extends AnchorPane {
      * @param longi longitud
      */
     private void centrar(double lati, double longi){
-        webengine.executeScript("centrar("+ lati +","+ longi +");");
+        webengine.executeScript("centrar("+ round(lati, 6) +","+ round(longi, 6) +");");
+    }
+
+    /**
+     * Este metodo redondea el value que pasa como parametro
+     * a los decimales (places) que pasan como parametro
+     * @param value valor
+     * @param places decimales
+     * @return value redondeado a places decimales
+     */
+    private static double round(double value, int places) {
+        if (places < 0) throw new IllegalArgumentException();
+
+        long factor = (long) Math.pow(10, places);
+        value = value * factor;
+        long tmp = Math.round(value);
+        return (double) tmp / factor;
     }
 
     /**
